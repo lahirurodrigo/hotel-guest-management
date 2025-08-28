@@ -48,10 +48,8 @@ Mini project using **PocketBase** (backend) and **React + Vite + TypeScript + Ta
 
 **Admin credentials (for grading)**
 
-- Email: `admin@example.com`  
-- Password: `CHANGEME`  
-
-> Replace with your own, then update here before submission.
+- Email: `kmlahirurodrigo@gmail.com`  
+- Password: `lahiru1995`  
 
 ---
 
