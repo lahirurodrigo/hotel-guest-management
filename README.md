@@ -57,8 +57,5 @@ Mini project using **PocketBase** (backend) and **React + Vite + TypeScript + Ta
 
 ```bash
 cd client
-cp .env.example .env
-# Set PocketBase URL in .env
-# VITE_PB_URL=http://127.0.0.1:8090
 npm install
 npm run dev
