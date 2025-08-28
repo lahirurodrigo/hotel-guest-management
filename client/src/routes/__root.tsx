@@ -1,5 +1,6 @@
 import { createRootRoute, Link, Outlet } from "@tanstack/react-router";
 
+// Root route for the entire app
 export const Route = createRootRoute({
     component: () => (
         <div className="min-h-screen bg-gray-50">

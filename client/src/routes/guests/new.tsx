@@ -5,12 +5,15 @@ import { useState } from 'react'
 import { Input } from '../../components/ui/Input'
 import { Button } from '../../components/ui/Button'
 
+// Define the route for adding a new guest
 export const Route = createFileRoute('/guests/new')({
   component: NewGuestPage,
 })
 
 function NewGuestPage() {
   const router = useRouter()
+
+  // Form state to hold input values for the new guest
   const [form, setForm] = useState({
     first_name: '',
     last_name: '',
@@ -20,6 +23,7 @@ function NewGuestPage() {
     date_of_birth: '',
   })
 
+  // Mutation to create a new guest
   const { mutateAsync, isPending, error } = useMutation({
     mutationFn: () => createGuest({ ...form }),
     onSuccess: () => router.navigate({ to: '/guests' }),

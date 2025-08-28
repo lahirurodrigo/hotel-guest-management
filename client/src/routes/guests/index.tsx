@@ -3,14 +3,17 @@ import { useQuery } from '@tanstack/react-query'
 import { useState } from 'react'
 import { listGuests } from '../../services/pocketbase'
 
-
+// Define route for the Guests list page
 export const Route = createFileRoute('/guests/')({
     component: GuestsPage,
 })
 
 
 function GuestsPage() {
+    // State for search query input
     const [q, setQ] = useState('')
+
+    // Fetch guests from backend using React Query
     const { data, isLoading, isError, refetch } = useQuery({
         queryKey: ['guests', q],
         queryFn: () => listGuests(q),

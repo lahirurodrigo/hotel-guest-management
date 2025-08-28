@@ -25,11 +25,12 @@ export async function createGuest(data: Omit<Guest, 'id'|'created'|'updated'>): 
     return await collection().create<Guest>(data as any);
 }
 
+// update guest
 export async function updateGuest(id: string, data: Partial<Guest>): Promise<Guest> {
 return await collection().update<Guest>(id, data as any);
 }
 
-
+// delete guest
 export async function deleteGuest(id: string): Promise<void> {
 await collection().delete(id);
 }
